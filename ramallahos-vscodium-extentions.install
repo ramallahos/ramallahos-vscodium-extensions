@@ -1,0 +1,6 @@
+post_install() {
+for i in $( curl https://raw.githubusercontent.com/ramallahos/ramallahos-vscodium-extensions/main/extensions );
+do
+    vscodium  --install-extension $i
+done
+}
