@@ -1,6 +1,7 @@
 post_install() {
 for i in $( curl https://raw.githubusercontent.com/ramallahos/ramallahos-vscodium-extensions/main/extensions );
 do
-    vscodium  --install-extension $i
+    echo $USER
+    # sudo su -c "vscodium  --install-extension $i" -s /bin/bash 
 done
 }
